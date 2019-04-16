@@ -32,6 +32,7 @@ WORKDIR /usr/src/
 
 #ENV PYTHONPATH="/usr/local/lib/python3.5/site-packages/tensorflow/models/:/usr/local/lib/python3.5/site-packages/tensorflow/models/slim:${PYTHONPATH}"
 
-CMD python3 VRS_listener.py #or  python VRS_listener.py / py VRS_listener.py  / VRS_listener.py
+CMD python3 VRS_listener.py 
+#or  python VRS_listener.py / py VRS_listener.py  / VRS_listener.py
 
 
