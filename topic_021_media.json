@@ -1,0 +1,39 @@
+{
+   "header": {
+      "topicName": "TOP021_INCIDENT_REPORT",
+      "topicMajorVersion": 1,
+      "topicMinorVersion": 0,
+      "sender": "SCAPP",
+      "msgIdentifier": "c581436e-474c-45e1-b018-1aa6228c19c1",
+      "sentUTC": "2019-02-05T15:01:00Z",
+      "status": "Actual",
+      "actionType": "Update",
+      "specificSender": "mobileAppTechnicalUser",
+      "scope": "Restricted",
+      "district": "Vicenza",
+      "recipients": "",
+      "code": 0,
+      "note": "",
+      "references": ""
+   },
+   "body": {
+      "incidentType" : "Flood",
+      "incidentOriginator": "SCAPP",
+      "incidentID": "INC_SCAPP_1478361246798143",
+      "language": "en-US",
+      "startTimeUTC": "2019-02-05T15:01:00Z",
+      "title": "Report from 2019-02-05T15:01:00Z",
+      "position": {
+         "latitude": 45.550171,
+         "longitude": 11.550287
+      },
+      "attachments":[
+         {
+            "attachmentName": "whatever.jpg",
+            "attachmentType": "image",
+            "attachmentTimeStampUTC": "2019-02-05T15:01:00Z",
+            "attachmentURL": "https://beaware-1.eu-de.containers.appdomain.cloud/object-store/5074%2Fdbc3168d-e70e-4b24-9897-e34fc1ab1696.jpeg"
+         }      
+        ]
+   }
+}

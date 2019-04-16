@@ -1,0 +1,39 @@
+{
+   "header": {
+      "topicName": "TOP021_INCIDENT_REPORT",
+      "topicMajorVersion": 1,
+      "topicMinorVersion": 0,
+      "sender": "SCAPP",
+      "msgIdentifier": "1548c96b-d0bc-4ba7-b65c-54e462fe94dc",
+      "sentUTC": "2019-02-05T15:00:00Z",
+      "status": "Actual",
+      "actionType": "Alert",
+      "specificSender": "mobileAppTechnicalUser",
+      "scope": "Restricted",
+      "district": "Vicenza",
+      "recipients": "",
+      "code": 0,
+      "note": "",
+      "references": ""
+   },
+   "body": {
+      "incidentType" : "Flood",
+      "incidentOriginator": "SCAPP",
+      "incidentID": "INC_SCAPP_1478361246798143",
+      "language": "en-US",
+      "startTimeUTC": "2019-02-05T15:00:00Z",
+      "title": "Report from 2019-02-05T15:00:00Z",
+      "position": {
+         "latitude": 45.550171,
+         "longitude": 11.550287
+      },
+      "attachments": [
+          {
+         "attachmentName": "",
+         "attachmentType": "",
+         "attachmentTimeStampUTC": "",
+         "attachmentURL": ""
+      }
+     ]
+   }
+}
