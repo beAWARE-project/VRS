@@ -2,13 +2,13 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: image-analysis
-  name: image-analysis
+    app: vrs
+  name: vrs
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: image-analysis
+      app: vrs
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -18,20 +18,20 @@ spec:
   template:
     metadata:
       labels:
-        app: image-analysis
+        app: vrs
     spec:
       containers:
-      - image: beaware/image-analysis:IMAGE_TAG
+      - image: beaware/vrs:IMAGE_TAG
         imagePullPolicy: Always
-        name: image-analysis
+        name: vrs
         ports:
-        - containerPort: 9999
+        - containerPort: 2080
           name: http
           protocol: TCP
         resources:
           requests:
-            cpu: 10m
-            memory: 10Mi
+            cpu: 200m
+            memory: 256Mi
         env:
           - name: SECRET_MH_API_KEY
             valueFrom:
