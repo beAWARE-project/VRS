@@ -1,13 +1,20 @@
-#FROM openjdk:8
+#FROM ppgiannak/obd:latest
 
-#COPY target/asr.jar /home
+#COPY src/image_analyzer.py /usr/src/listener/
+#COPY src/image_listener.py /usr/src/listener/
+#COPY src/timing_test.py /usr/src/listener/
+#COPY src/output/timetest_output.json /usr/src/listener/output/
+#COPY src/model/label_map.pbtxt /usr/src/listener/model/
+#COPY src/model/crisis_index.json /usr/src/listener/model/
 
-#COPY resources/acoustic_models/ /home/acoustic_models
-##COPY resources/jave-1.0.2.jar   /home/resources/
+#WORKDIR /usr/src/listener/model/
 
-#WORKDIR  /home/acoustic_models/Spanish/cmu_spanish/
-#RUN wget -O es-20k.lm  https://beaware-1.eu-de.containers.appdomain.cloud/object-store/es-20k.lm
+#RUN wget -O frozen_inference_graph.pb http://object-store-app.eu-gb.mybluemix.net/objectStorage?file=frozen_inference_graph.pb
+#RUN wget -O vgg_places https://www.dropbox.com/s/53xg37xytrpp8rp/vgg_places?dl=0
 
-#WORKDIR /home
+#WORKDIR /usr/src/
+#WORKDIR /usr/src/listener/
 
-#CMD ["java", "-jar", "asr.jar"]
+#ENV PYTHONPATH="/usr/local/lib/python3.5/site-packages/tensorflow/models/:/usr/local/lib/python3.5/site-packages/tensorflow/models/slim:${PYTHONPATH}"
+
+#CMD python3 image_listener.py
